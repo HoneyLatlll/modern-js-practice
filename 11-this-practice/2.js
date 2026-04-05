@@ -1,7 +1,7 @@
 // 2. Arrow Function에서의 this 사용을 이해해보세요
 
 // TODO: 아래 두 결과가 다른지 이유를 설명하세요
-
+//화살표함수는 해당 객체 밖에서 쓰면 window(전역)을 가르켜서 undefined가 뜬다.. 이거 맞나?
 const person = {
   name: "홍길동",
   greet: function () {

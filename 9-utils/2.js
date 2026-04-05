@@ -1,6 +1,11 @@
 // 2. 사용자 객체 생성
 function createUser(name, age = 0, role = "user") {
   // TODO: 객체 반환
+  return {
+    name,
+    age,
+    role,
+  };
 }
 
 console.log(createUser("홍길동"));
