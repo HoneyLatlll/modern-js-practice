@@ -2,7 +2,9 @@
 function map(array, callback) {
   // TODO: callback 결과로 새 배열 생성
   const result = [];
-
+  for (let i = 0; i < array.length; i++) {
+    result.push(callback(array[i]));
+  }
   return result;
 }
 

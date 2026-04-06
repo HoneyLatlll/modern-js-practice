@@ -16,20 +16,20 @@ function checkData(Data) {
   let check = 0;
   for (let userData in Data) {
     if (userData === "username" && !Data[userData]) {
-      console.log("username 문제 발생");
+      console.log("username 비어있습니다. 입력해주세요.");
       check++;
     } else if (userData === "email" && !Data[userData].includes("@")) {
-      console.log("email 문제 발생");
+      console.log("email @이 없는 문제 발생");
       check++;
     } else if (userData === "password" && Data[userData].length < 6) {
-      console.log("password 문제 발생");
+      console.log("password 6자 이상이 아닌 문제 발생");
       check++;
     } else if (
       userData === "age" &&
       (typeof Data[userData] !== "number" || Data[userData] < 0)
     ) {
       //typeof로 비교할때 Number가 아니라 "number"문자열로 비교해야함
-      console.log("age 문제 발생");
+      console.log("age 0보다 작은 문제 발생");
       check++;
     }
   }

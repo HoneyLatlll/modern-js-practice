@@ -7,11 +7,15 @@ function canDrive(age, hasLicense, hasVision) {
   // 3. 시력 검사 통과
   // 모두 만족해야 운전 가능
   // AND 연산자 활용
-  if (age >= 18 && hasLicense && hasVision) {
-    return true;
-  } else {
-    return false;
-  }
+
+  // if (age >= 18 && hasLicense && hasVision) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+
+  //겁나 간단하네 아...
+  return age >= 18 && hasLicense && hasVision;
 }
 console.log("=== 운전 가능 ===");
 console.log(canDrive(20, true, true)); // true
@@ -25,11 +29,14 @@ function getDiscount(age, isMember, isHoliday) {
   // 2. 멤버십 회원
   // 3. 공휴일
   // OR 연산자 활용
-  if (age >= 65 || isMember || isHoliday) {
-    return true;
-  } else {
-    return false;
-  }
+  // if (age >= 65 || isMember || isHoliday) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+
+  //아.. 간단한거였네
+  return age >= 65 || isMember || isHoliday;
 }
 
 console.log("=== 할인 적용 ===");

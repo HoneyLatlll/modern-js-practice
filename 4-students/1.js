@@ -12,7 +12,7 @@ for (let i = 0; i < names.length; i++) {
   sum += scores[i];
 }
 
-console.log(`평균 점수 : ${sum / names.length}`);
+console.log(`평균 점수 : ${(sum / names.length).toFixed(2)}`);
 
 // TODO: 각 학생의 이름과 점수 출력
 // 홍길동: 85점

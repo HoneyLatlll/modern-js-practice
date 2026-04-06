@@ -15,24 +15,37 @@ const userSettings = {
 
 const defaultSettings = {
   // TODO: 이 부분을 userSettings 이용해서 채워넣으세요
-  theme:
-    userSettings.theme !== null && userSettings.theme !== undefined
-      ? userSettings.theme
-      : "light",
-  notifications:
-    userSettings.notifications !== null &&
-    userSettings.notifications !== undefined
-      ? userSettings.notifications
-      : "true",
-  language:
-    userSettings.language !== null && userSettings.language !== undefined
-      ? userSettings.language
-      : "ko",
-  fontSize:
-    userSettings.fontSize !== null && userSettings.fontSize !== undefined
-      ? userSettings.fontSize
-      : 14,
+  // theme:
+  //   userSettings.theme !== null && userSettings.theme !== undefined
+  //     ? userSettings.theme
+  //     : "light",
+  // notifications:
+  //   userSettings.notifications !== null &&
+  //   userSettings.notifications !== undefined
+  //     ? userSettings.notifications
+  //     : "true",
+  // language:
+  //   userSettings.language !== null && userSettings.language !== undefined
+  //     ? userSettings.language
+  //     : "ko",
+  // fontSize:
+  //   userSettings.fontSize !== null && userSettings.fontSize !== undefined
+  //     ? userSettings.fontSize
+  //     : 14,
+  theme: userSettings.theme ?? "light",
+  notifications: userSettings.notifications ?? true,
+  language: userSettings.language ?? "ko",
+  fontSize: userSettings.fontSize ?? 14,
 };
+
+//객체 안의 스프레드 속성 수정시 유용하다
+// const defaultSettings = {
+//   ...userSettings,
+//   theme: "light",
+//   notifications: true,
+//   language: "ko",
+//   fontSize: 14,
+// };
 
 console.log(defaultSettings);
 

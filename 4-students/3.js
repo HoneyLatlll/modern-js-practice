@@ -19,9 +19,9 @@ console.log("=== 학생별 성적 ===");
 for (let student of students) {
   let sum = 0;
   let count = 0;
-  for (let j in student) {
-    if (j != "name") {
-      sum += student[j];
+  for (let key in student) {
+    if (key != "name") {
+      sum += student[key];
       count++;
     }
   }

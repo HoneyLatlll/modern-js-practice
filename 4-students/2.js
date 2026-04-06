@@ -19,6 +19,6 @@ for (let key in student) {
     average = sum / 3;
   }
 }
-console.log(average);
+console.log(`${student.name} 총점: ${sum}점, 평균: ${average.toFixed(2)}`);
 // TODO: 평균 계산
-// TODO: 결과 출력
+// TODO: 결과 출력 홍길동 총점 : 00점, 평균 00점
