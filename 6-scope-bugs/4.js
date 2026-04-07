@@ -12,5 +12,5 @@ function test2() {
 console.log("test1", test1());
 console.log("test2", test2());
 // TODO: 왜 결과가 다를까요?
-
 // TODO: 각각 어떻게 동작하나요?
+//var는 호이스팅되면 undefined가 들어가있고 let은 값자체가 없기때문에 참조에러가난다

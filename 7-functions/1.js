@@ -9,13 +9,14 @@ console.log(greetUser("홍길동")); // 안녕하세요, 홍길동님!
 // 2. 두 숫자 중 큰 수를 반환하는 함수 (함수 표현식)
 const getMax = function (a, b) {
   // TODO: 큰 수 반환
-  if (a < b) {
-    return b;
-  } else if (a > b) {
-    return a;
-  } else {
-    return null;
-  }
+  // if (a < b) {
+  //   return b;
+  // } else if (a > b) {
+  //   return a;
+  // }
+  //  return null;
+  //
+  return Math.max(a, b);
 };
 
 console.log(getMax(10, 20)); // 20
@@ -25,9 +26,8 @@ function isEven(num) {
   // TODO: 짝수면 true, 홀수면 false
   if (num % 2 === 0) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 console.log(isEven(4)); // true

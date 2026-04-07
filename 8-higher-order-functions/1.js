@@ -6,8 +6,10 @@ function map(array, transform) {
   // transform 함수 호출 (hint: transform(array[i]))
   // 결과를 result에 추가 (hint: push 메서드 사용)
   for (let arr = 0; arr < array.length; arr++) {
-    result.push(array[arr]);
-    result[arr] = transform(array[arr]);
+    //for of 문 사용해도 가능
+    // result.push(array[arr]);
+    // result[arr] = transform(array[arr]);
+    result.push(transform(array[arr])); //한줄로 축약가능
   }
   return result;
 }

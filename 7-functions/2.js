@@ -15,7 +15,7 @@ console.log(getAverage([10, 20, 30])); // 20
 function reverseString(str) {
   // TODO: 문자열을 거꾸로 반환
   // 힌트: split(''), reverse(), join('')
-  let rts = str.split("").reverse().join("");
+  const rts = str.split("").reverse().join("");
   return rts;
 }
 

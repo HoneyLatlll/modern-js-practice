@@ -8,5 +8,7 @@ const product = {
 
 // TODO: price만 1200000으로 변경한 새 객체
 // const updatedProduct =
+const updatedProduct = { ...product };
+updatedProduct.price = 1200000;
 console.log(product.price); // 1000000 (원본 유지)
 console.log(updatedProduct.price); // 1200000
