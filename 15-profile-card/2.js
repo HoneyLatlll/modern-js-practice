@@ -4,9 +4,10 @@
 
 function createProfileCard(user) {
   // 값이 있을 때만 HTML 생성, 없으면 빈 문자열
-  const emailSection = /* TODO: user.email 이 있으면 아래 예상출력보고 단축평가 연산자 코드 작성하세요 */
-  const phoneSection = /* TODO: user.phone 이 있으면 아래 예상출력보고 단축평가 연산자 코드 작성하세요 */
-
+  //   const emailSection = /* TODO: user.email 이 있으면 아래 예상출력보고 단축평가 연산자 코드 작성하세요 */
+  //   const phoneSection = /* TODO: user.phone 이 있으면 아래 예상출력보고 단축평가 연산자 코드 작성하세요 */
+  const emailSection = user.email ? user.email : "";
+  const phoneSection = user.phone ? user.phone : "";
   return `
         <div class="profile-card">
             <h2>${user.name}</h2>
@@ -27,10 +28,10 @@ const user1 = {
 
 console.log(createProfileCard(user1));
 
-
-<div class="profile-card">
-    <h2>김철수</h2>
-    <p>나이: 30세</p>
-    <p>이메일: kim@example.com</p>
-    
-</div>
+{
+  /* <div class="profile-card">
+  <h2>김철수</h2>
+  <p>나이: 30세</p>
+  <p>이메일: kim@example.com</p>
+</div>; */
+}

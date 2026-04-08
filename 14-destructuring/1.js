@@ -3,6 +3,7 @@ const colors = ["red", "green", "blue", "yellow"];
 
 // TODO: 첫 번째와 세 번째 색만 추출
 // const [] = colors;
+const [first, , third] = colors;
 
 console.log(first, third); // red blue
 
@@ -16,11 +17,12 @@ const user = {
 
 // TODO: name과 age만 추출
 // const {  } = user;
+const { name, age } = user;
 
 console.log(name, age); // 홍길동 25
 
 // 3. 변수명 변경
 // TODO: name을 userName으로, age를 userAge로
 // const {  } = user;
-
+const { name: userName, age: userAge } = user;
 console.log(userName, userAge); // 홍길동 25

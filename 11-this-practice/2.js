@@ -1,7 +1,6 @@
 // 2. Arrow Function에서의 this 사용을 이해해보세요
 
 // TODO: 아래 두 결과가 다른지 이유를 설명하세요
-//화살표함수는 해당 객체 밖에서 쓰면 window(전역)을 가르켜서 undefined가 뜬다.. 이거 맞나?
 const person = {
   name: "홍길동",
   greet: function () {
@@ -17,6 +16,7 @@ person.greet(); // 안녕하세요, 저는 홍길동입니다.
 
 const person2 = {
   name: "김철수",
+  //this는 함수스코프 단위 이기 때문에 greet 바깥의 전역을 가리키게 되어 undefined가 나온다
   greet: () => {
     console.log(`안녕하세요, 저는 ${this.name}입니다.`);
   },
