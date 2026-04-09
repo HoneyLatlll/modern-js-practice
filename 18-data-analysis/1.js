@@ -61,14 +61,16 @@ const sales = [
 function getTotalRevenue(sales) {
   // TODO: reduce 사용
   // price * quantity의 합계
+  const sum = sales.reduce((acc, sale) => acc + sale.price * sale.quantity, 0);
+  return sum;
 }
 
 console.log(getTotalRevenue(sales)); // 4090000
 
-// 2. 카테고리별 매출액
-function getRevenueByCategory(sales) {
-  // TODO: reduce로 카테고리별 그룹화 후 계산
-}
+// // 2. 카테고리별 매출액
+// function getRevenueByCategory(sales) {
+//   // TODO: reduce로 카테고리별 그룹화 후 계산
+// }
 
-console.log(getRevenueByCategory(sales));
-// { '전자제품': 3390000, '가구': 700000 }
+// console.log(getRevenueByCategory(sales));
+// // { '전자제품': 3390000, '가구': 700000 }
