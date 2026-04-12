@@ -71,31 +71,45 @@ console.log(getTotalRevenue(sales)); // 4090000
 // function getRevenueByCategory(sales) {
 //   // TODO: reduce로 카테고리별 그룹화 후 계산
 // }
+// function getRevenueByCategory(sales) {
+//   const groupCategory = sales.reduce((acc, sale) => {
+//     const category = sale.category; //cateagory에 현재 sale의 category 값을 넣는다 "전자제품" 혹은 "가구"
+//     if (!acc[category]) {
+//       // const acc = {}; // 빈 객체
+//       // acc["전자제품"] = []; // 키가 없어도 바로 생성됨!
+//       //자바스크립트는 없는 키에 값을 넣으면 그냥 자동으로 만들어준다
+//       // acc = { "전자제품": [] }
+//       acc[category] = [];
+//     }
+//     acc[category].push(sale.price * sale.quantity); // 빈 배열에 현재 sale의 price 값을 넣는다
+//     return acc; //위를 모두 완료한 누적 acc를 반환한다
+//   }, {});
+
+//   for (let key in groupCategory) {
+//     // let sum = 0;
+//     // for (let price of groupCategory[key]) {
+//     //   sum += price;
+//     // }
+//     // groupCategory[key] = sum;
+//     groupCategory[key] = groupCategory[key].reduce(
+//       (acc, price) => acc + price,
+//       0,
+//     );
+//   }
+
+//   return groupCategory;
+// }
+
+//이게 레알이가; 이런식으로 하면 이렇게 쉽게 끝나는거였어? 어이가 없네
 function getRevenueByCategory(sales) {
   const groupCategory = sales.reduce((acc, sale) => {
-    const category = sale.category; //cateagory에 현재 sale의 category 값을 넣는다 "전자제품" 혹은 "가구"
+    const category = sale.category;
     if (!acc[category]) {
-      // const acc = {}; // 빈 객체
-      // acc["전자제품"] = []; // 키가 없어도 바로 생성됨!
-      //자바스크립트는 없는 키에 값을 넣으면 그냥 자동으로 만들어준다
-      // acc = { "전자제품": [] }
-      acc[category] = [];
+      acc[category] = 0;
     }
-    acc[category].push(sale.price * sale.quantity); // 빈 배열에 현재 sale의 price 값을 넣는다
-    return acc; //위를 모두 완료한 누적 acc를 반환한다
+    acc[category] += sale.price * sale.quantity;
+    return acc;
   }, {});
-
-  for (let key in groupCategory) {
-    // let sum = 0;
-    // for (let price of groupCategory[key]) {
-    //   sum += price;
-    // }
-    // groupCategory[key] = sum;
-    groupCategory[key] = groupCategory[key].reduce(
-      (acc, price) => acc + price,
-      0,
-    );
-  }
 
   return groupCategory;
 }
